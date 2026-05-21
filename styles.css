@@ -415,6 +415,29 @@ h3 {
   max-width: 720px;
 }
 
+.urgency-strip {
+  display: grid;
+  gap: 6px;
+  max-width: 900px;
+  margin: -8px 0 24px;
+  padding: 18px 20px;
+  border: 1px solid rgba(142, 81, 77, 0.22);
+  border-left: 4px solid var(--rose-dark);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 14px 40px rgba(58, 43, 34, 0.08);
+}
+
+.urgency-strip strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.25rem, 2.6vw, 1.8rem);
+  line-height: 1.08;
+}
+
+.urgency-strip span {
+  color: var(--muted);
+}
+
 .problem-grid,
 .pricing-grid {
   display: grid;
