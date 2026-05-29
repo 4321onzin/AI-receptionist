@@ -13,8 +13,11 @@
   <body>
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Sélia home">
-        <span class="brand-mark">S</span>
-        <span>Sélia</span>
+        <img class="brand-logo" src="assets/selia-logo.jpg" alt="" width="40" height="40">
+        <span>
+          <strong>Sélia</strong>
+          <small>Bereikbaar terwijl jij behandelt.</small>
+        </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="sr-only">Menu</span>
@@ -33,37 +36,34 @@
     <main id="top">
       <section class="hero section-band">
         <div class="hero-content">
-          <p class="eyebrow">AI receptioniste voor beauty & wellness salons</p>
-          <h1>Alle aandacht voor je klant, terwijl Sélia je salon bereikbaar houdt</h1>
+          <p class="eyebrow">Sélia · bereikbaar terwijl jij behandelt</p>
+          <h1>Sélia beantwoordt WhatsApp-aanvragen terwijl jij met je klant bezig bent.</h1>
           <p class="hero-copy">
-            Sélia reageert op WhatsApp-aanvragen van klanten, stelt de juiste vragen en zet alles
-            overzichtelijk voor je klaar. Zo kun jij je volledig richten op de klant die bij jou in de stoel zit.
+            Sélia reageert vriendelijk, stelt de juiste vragen en zet afspraakverzoeken overzichtelijk
+            voor je klaar. Jij houdt controle, je klant krijgt snel antwoord.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#contact">Vraag een kennismaking aan</a>
+            <a class="button primary" href="#contact">Vraag een demo aan</a>
             <a class="button secondary" href="#wat">Bekijk wat Sélia doet</a>
           </div>
         </div>
 
-        <div class="salon-panel" aria-label="Voorbeeld van Sélia in een salon">
+        <div class="salon-panel" aria-label="Voorbeeld van Sélia in WhatsApp">
           <div class="salon-topline">
-            <span>WhatsApp-aanvraag</span>
+            <span>Voorbeeld WhatsApp-aanvraag</span>
             <strong>Vandaag 10:42</strong>
           </div>
-          <div class="message-card client">
-            <span class="avatar">N</span>
-            <p>Hoi, heb je plek voor een BIAB refill deze week?</p>
-          </div>
-          <div class="message-card selia">
-            <span class="avatar">S</span>
-            <p>Een BIAB refill duurt ongeveer 60 minuten. Ik kijk graag mee. Komt dinsdagmiddag of donderdag aan het einde van de ochtend voor je uit?</p>
-          </div>
-          <div class="salon-visual">
-            <div class="mirror"></div>
-            <div class="chair"></div>
-            <div class="bottle tall"></div>
-            <div class="bottle small"></div>
-          </div>
+          <video
+            class="example-video"
+            src="assets/selia-whatsapp-voorbeeld.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="metadata"
+            aria-label="Voorbeeld van hoe Sélia een WhatsApp-aanvraag beantwoordt"
+          ></video>
+          <p class="example-caption">Voorbeeld van een aanvraag die Sélia vriendelijk opvangt en klaarzet voor jouw opvolging.</p>
         </div>
       </section>
 
@@ -197,7 +197,7 @@
                 <p>+ €199 setup</p>
               </div>
             </div>
-            <a class="button primary full" href="#contact">Start met receptioniste</a>
+            <a class="button primary full" href="#contact">Vraag een demo aan</a>
           </article>
 
           <article class="price-card highlighted">
@@ -217,7 +217,7 @@
                 <p>+ €199 setup</p>
               </div>
             </div>
-            <a class="button primary full" href="#contact">Bespreek agenda-hulp</a>
+            <a class="button primary full" href="#contact">Vraag een demo aan</a>
           </article>
         </div>
       </section>
@@ -228,10 +228,10 @@
             <p class="eyebrow">Kennismaken</p>
             <h2>Benieuwd hoe Sélia voor jouw salon zou reageren?</h2>
             <p>
-              Vraag een demo aan en op basis van de beschikbare informatie op jouw website kunnen we binnen 24 uur laten zien hoe Sélia jou kan helpen als je persoonlijke receptioniste.
+              Vraag een demo aan. Op basis van jouw website laten we binnen 24 uur zien hoe Sélia aanvragen vriendelijk opvangt en overzichtelijk voor je klaarzet.
             </p>
           </div>
-          <a class="button primary" href="mailto:hallo@selia.nl?subject=Kennismaking%20S%C3%A9lia">Mail Sélia</a>
+          <a class="button primary" href="mailto:hallo@selia.nl?subject=Demo%20S%C3%A9lia">Vraag een demo aan</a>
         </div>
       </section>
     </main>
@@ -241,6 +241,19 @@
       <span>AI receptioniste voor beauty & wellness salons</span>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      const yearTarget = document.querySelector("[data-year]");
+      if (yearTarget) {
+        yearTarget.textContent = new Date().getFullYear();
+      }
+
+      const navToggle = document.querySelector(".nav-toggle");
+      if (navToggle) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = document.body.classList.toggle("nav-open");
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+      }
+    </script>
   </body>
 </html>
